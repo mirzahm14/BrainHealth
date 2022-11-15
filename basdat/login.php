@@ -1,0 +1,52 @@
+<?php
+include("connect.php");
+include("header.php");
+if(isset($_POST['submit'])){
+    $nik = $_POST['nik'];
+    $password = $_POST['password'];
+
+    $query = pg_query("SELECT * FROM patient WHERE nik = '$nik' AND password = '$password';");
+    $cek = pg_num_rows($query);
+
+    if ($cek == 1){
+        session_start();
+        header('Location: frontpage.php?status=sukses');
+    } else {
+        header('Location: login.php?status=gagal');
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PHP PostgreSQL Registration & Login Example </title>
+  <meta name="keywords" content="PHP,PostgreSQL,Insert,Login">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <h2>Login Here </h2>
+  <form method="post">
+  
+     
+    <div class="form-group">
+      <label for="nik">NIK:</label>
+      <input type="text" class="form-control" id="nik" placeholder="Masukkan NIK" name="nik">
+    </div>
+    
+     
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" placeholder="Masukkan Password" name="password">
+    </div>
+     
+    <input type="submit" name="submit" class="btn btn-primary" value="Submit">
+    <p>Belum punya akun?</p>
+    <a href="register.php">Sign Up</a>
+  </form>
+</div>
+</body>
+</html>
