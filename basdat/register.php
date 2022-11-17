@@ -5,11 +5,13 @@ include("header.php");
 if (isset($_POST['submit'])&&!empty($_POST['submit'])){
     $nik = $_POST['nik'];
     $nama = $_POST['nama'];
+    $birthdate = $_POST['birthdate'];
+    $newBirthdate = date("Y-m-d", strtotime($birthdate));
     $sex = $_POST['sex'];
     $password = $_POST['password'];
 
     //buat query
-    $query = pg_query("INSERT INTO patient (nik, nama, sex, password) VALUES ('$nik', '$nama', '$sex', '$password')");
+    $query = pg_query("INSERT INTO patient (nik, nama, birthdate, sex, password) VALUES ('$nik', '$nama', '$newBirthdate', '$sex', '$password')");
     if($query == TRUE){
         header('Location: login.php?status=sukses');
     } else {
@@ -34,12 +36,17 @@ if (isset($_POST['submit'])&&!empty($_POST['submit'])){
   
     <div class="form-group">
       <label for="nik">NIK:</label>
-      <input type="text" class="form-control" id="nik" placeholder="Masukkan NIK" name="nik" requuired>
+      <input type="text" class="form-control" id="nik" placeholder="Masukkan NIK" name="nik" required>
     </div>
     
     <div class="form-group">
       <label for="nama">Nama:</label>
-      <input type="text" class="form-control" id="name" placeholder="Masukkan Nama Lengkap" name="nama">
+      <input type="text" class="form-control" id="name" placeholder="Masukkan Nama Lengkap" name="nama" required>
+    </div>
+
+    <div class="form-group">
+      <label for="birthdate">Tanggal lahir:</label>
+      <input type="date" class="form-control" id="birthdate" placeholder="Masukkan Tanggal Lahir" name="birthdate" required>
     </div>
     
     <div class="form-group">
@@ -50,7 +57,7 @@ if (isset($_POST['submit'])&&!empty($_POST['submit'])){
 
     <div class="form-group">
         <label for="password">Password:</label>
-        <input type="password" class="form-control" id="password" placeholder="Masukkan Password" name="password">
+        <input type="password" class="form-control" id="password" placeholder="Masukkan Password" name="password" required>
     </div>
      
     <input type="submit" name="submit" class="btn btn-primary" value="Submit">
