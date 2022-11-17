@@ -20,8 +20,6 @@ NIK CHAR(16) REFERENCES patient (NIK),
 Psikolog_ID CHAR(16) REFERENCES psikolog (psikolog_id),
 Tanggal_pemesanan DATE,
 Waktu_Konsultasi TIME,
-Harga VARCHAR(24) NOT NULL,
-Jenis_pembayaran VARCHAR(24) NOT NULL,
 Status_pemesanan VARCHAR(24) NOT NULL);
 
 CREATE TABLE Pembayaran(
