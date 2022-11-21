@@ -35,6 +35,7 @@ $result = mysqli_query($koneksi, "SELECT * FROM appointment JOIN pasien ON appoi
             <th>Psikolog</th>
             <th>Tanggal Konsultasi</th>
             <th>Waktu Konsultasi</th>
+            <th>Total Harga</th>
             <th>Status</th>
             <th>Aksi</th>
         </tr>
@@ -47,6 +48,7 @@ $result = mysqli_query($koneksi, "SELECT * FROM appointment JOIN pasien ON appoi
             <td><?= $row["nama_psikolog"]; ?></td>
             <td><?= $row["tanggal_pemesanan"]; ?></td>
             <td><?= $row["waktu_konsultasi"]; ?></td>
+            <td>Rp150.000</td>
             <td><?= $row["status"]; ?></td>
             <td>
                 <a href="bill.php?appointment_id=<?= $row["appointment_id"]; ?>">Bayar</a><br>
