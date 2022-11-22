@@ -1,9 +1,7 @@
 # Tugas Akhir Mata Kuliah KOM120F - Basisdata
 
-## Anggota Kelompok
+## Basis Data P4 - Kelompok 6
 
-Paralel : 4 <br />
-Kelompok : 6
 | Nama | NIM |
 | -------------------------- |:-------------:|
 | Mirza Hafiz Muhammad | G6401211017 |
