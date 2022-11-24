@@ -8,8 +8,8 @@
 | Muhammad Khalil Adha | G6401211060 |
 | Priscilla Nur Elia Putri Gulo | G6401211045 |
 
-# e-Counseling
+# BrainHealth
 
-e-Counseling adalah sebuah aplikasi berbasis web yang digunakan oleh user/pasien untuk melakukan pemesanan jadwal konsultasi secara daring dengan psikolog.<br />
+BrainHealth adalah sebuah aplikasi berbasis web yang digunakan oleh user/pasien untuk melakukan pemesanan jadwal konsultasi secara daring dengan psikolog.<br />
 
 ## Resources
