@@ -15,6 +15,12 @@ $appointment_id = $_GET['appointment_id'];
 $query = mysqli_query($koneksi, "SELECT * FROM appointment JOIN psikolog ON appointment.psikolog_id = psikolog.psikolog_id JOIN pasien ON appointment.nik = pasien.nik WHERE appointment_id = $appointment_id");
 $row = mysqli_fetch_assoc($query);
 
+//cek status pembayaran
+if($row['status'] == 'PAID'){
+    echo "<script>alert('Anda Sudah Membayar!');
+                document.location.href ='daftarpesanan.php'</script>";
+}
+
 //cek apakah tombol bayar sudah diklik
 if ( isset($_POST['bayar']) ){
     //ambil data dari formulir
