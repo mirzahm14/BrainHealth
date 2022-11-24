@@ -12,7 +12,7 @@ if( isset($_POST['register']) ){
 
     //ambil data dari form
     //htmlspecialchars untuk menghindari injeksi dr user
-    $nik = htmlspecialchars($_POST['nik']);
+    $nik = strval(htmlspecialchars($_POST['nik']));
     $nama_pasien = htmlspecialchars($_POST['nama_pasien']);
     $ttl = htmlspecialchars(date("Y-m-d", strtotime($_POST['ttl']))); //ubah format ttl html to postgres
     $jenis_kelamin = htmlspecialchars($_POST['jenis_kelamin']);
