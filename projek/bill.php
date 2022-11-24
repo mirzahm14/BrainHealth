@@ -27,9 +27,10 @@ if ( isset($_POST['bayar']) ){
     $appointment_id = $appointment_id;
     $tagihan = 'Rp150.000';
     $jenis_pembayaran = $_POST['jenis_pembayaran'];
+    $nomor_hp = strval($_POST['nomor_hp']);
 
     //buat query
-    $result = mysqli_query($koneksi, "INSERT INTO pembayaran VALUES ('$appointment_id', '$tagihan', '$jenis_pembayaran')");
+    $result = mysqli_query($koneksi, "INSERT INTO pembayaran VALUES ('$appointment_id', '$tagihan', '$jenis_pembayaran', '$nomor_hp')");
 
     //cek query berhasil atau tidak
     if($result){
@@ -74,6 +75,10 @@ if ( isset($_POST['bayar']) ){
                     <option value="dana">DANA</option>
                     <option value="bank">Transfer Bank</option>
                 </select>
+            </p>
+            <p>
+                <label for="nomor_hp">Nomor HP: </label>
+                <input type="number" id="nomor_hp" name="nomor_hp">
             </p>
         </fieldset>
         <button type="submit" name="bayar" onclick="return confirm('Pesanan yang sudah dibayar dan ingin dibatalkan, tidak mendapatkan refund!');">Bayar</button>
