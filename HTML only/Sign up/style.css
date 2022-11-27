@@ -31,7 +31,7 @@ html, body{
 .form-control{
     background-color: #ffff;
     border-color: #908f96;
-    border-width: 2px;
+    border-width: 1px;
     padding: 5px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -50,7 +50,7 @@ html, body{
 }
 
 .button{
-    background: #2C2E43 !important;
+    background: #1a1c28 !important;
     color: #FFD523;
     transform: translateY(15px);
     -webkit-transform: translateY(15px);
