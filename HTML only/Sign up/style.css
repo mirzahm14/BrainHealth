@@ -24,6 +24,7 @@ html, body{
     height: 500px;
     width: 600px;
     margin-top: 20px;
+    margin-bottom: 20px;
     align-items: center;
 }
 
@@ -64,8 +65,8 @@ html, body{
     -ms-border-radius: 10px !important;
     -o-border-radius: 10px !important;
     border: none;
-    padding-bottom: 5px;
-    padding-top: 5px;
+    padding-bottom: 8px;
+    padding-top: 8px;
     padding-left: 30px;
     padding-right: 30px;
 }
