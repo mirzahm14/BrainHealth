@@ -1,0 +1,40 @@
+html,
+body {
+  height: 100%;
+  background-color: #e5e5e5 !important;
+}
+
+.layanancard {
+  display: flex;
+  padding-left: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.btn {
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.logout {
+  text-decoration: none;
+  color: #ffd523;
+}
+
+.logout:hover {
+  text-decoration: none;
+  color: white;
+}
